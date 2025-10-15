@@ -1,0 +1,6 @@
+.name-section, .about-section, .education-section, .courses-section, .learning-section, 
+.textarea-section {
+    text-align: center;
+    max-width: 60%;
+    margin: 0 auto;
+}
