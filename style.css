@@ -1,6 +1,22 @@
 .name-section, .about-section, .education-section, .courses-section, .learning-section, 
-.textarea-section {
+.contact-section {
+    font-family: Arial;
     text-align: center;
     max-width: 60%;
     margin: 0 auto;
+}
+ul {
+    text-align: left;
+}
+#usermessage {
+    width: 250px;
+    height: 250px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+#sendmessage {
+  display: block;
+  margin: 0 auto;
+  border-radius: 5px;
+  padding: 5px 10px;
 }
