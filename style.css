@@ -56,19 +56,19 @@ body.dark {
 
 body.dark .toggle-ball {
   transform: translateX(25px);
-  background: #fdd835; 
+  background: #e8f1d4; 
 }
 
 body .toggle-ball {
-    background: black;     
+    background: #121b54;     
 }
 
 
 :root {
-    --bg-light: white;
-    --text-light: black;
-    --bg-dark: #121212;
-    --text-dark: #f5f5f5;
+    --bg-light: #e5e4e2;
+    --text-light: #121b54;
+    --bg-dark: #3a3b3c;
+    --text-dark: #e8f1d4;
 }
 
 .reveal {
