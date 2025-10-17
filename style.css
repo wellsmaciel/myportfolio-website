@@ -9,16 +9,20 @@
 ul {
     text-align: left;
 }
-#textarea{
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    font-family: inherit;
-    font-size: 14px;
-    resize: vertical;
-    outline: none;
-    border-color: #666;
+#textarea {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-family: inherit;
+  font-size: 14px;
+  resize: vertical;
+  outline: none;
 }
+#textarea:focus {
+  border-color: #666;
+}
+
+
 #sendmessage {
   display: block;
   margin: 0 auto;
@@ -26,16 +30,18 @@ ul {
   padding: 5px 10px;
 }
 
-.theme-button {
+.theme-section {
     position: fixed;
     top: 15px;
     right: 15px;
+    cursor: pointer;
 }
 
 /* Light Theme - Default*/
 body {
     background-color: var(--bg-light);
     color: var(--text-light)
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 body.dark {
@@ -51,7 +57,7 @@ body.dark {
 }
 
 .reveal {
-    transform: translate(16px);
+    transform: translateY(16px);
     transition: opacity .6s ease; transform: .6s ease;
 }
 
