@@ -1,17 +1,26 @@
+//Theme toggle switch Button
 const themeButton = document.getElementById ("theme-button")
 
-
 themeButton.addEventListener("click", () => {
-    document.body.classList.toggle("dark");
-
-    if (document.body.classList.contains("dark")) {
-        themeButton.textContent = "☀️ Light"
-    } else {
-        themeButton.textContent = "🌙 dark"
-    }
+  document.body.classList.toggle("dark");
 });
 
 
-//document.body.classList.toggle("dark"); change it to "dark" manually to test it
+/* Old Button
+themeButton.addEventListener("click", () => {
+    document.body.classList.toggle("Dark");
+
+    if (document.body.classList.contains("Dark")) {
+        themeButton.textContent = "☀️ Light"
+    } else {
+        themeButton.textContent = "🌙 Dark"
+    }
+});
+*/
+
+
+
+
+
 
 

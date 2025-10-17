@@ -1,7 +1,7 @@
 
 .name-section, .about-section, .education-section, .courses-section, .learning-section, 
 .contact-section {
-    font-family: Arial;
+    font-family: Arial, sans-serif;
     text-align: center;
     max-width: 60%;
     margin: 0 auto;
@@ -22,13 +22,18 @@ ul {
   border-color: #666;
 }
 
-
 #sendmessage {
   display: block;
   margin: 0 auto;
   border-radius: 5px;
   padding: 5px 10px;
 }
+
+.theme-section label{
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+
 
 .theme-section {
     position: fixed;
@@ -40,14 +45,24 @@ ul {
 /* Light Theme - Default*/
 body {
     background-color: var(--bg-light);
-    color: var(--text-light)
+    color: var(--text-light);
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 body.dark {
     background-color: var(--bg-dark);
-    color: var(--text-dark)
+    color: var(--text-dark);
 }
+
+body.dark .toggle-ball {
+  transform: translateX(25px);
+  background: #fdd835; 
+}
+
+body .toggle-ball {
+    background: black;     
+}
+
 
 :root {
     --bg-light: white;
@@ -64,4 +79,23 @@ body.dark {
 .reveal.is-visible {
     opacity: 1;
     transform: none;
+}
+.toggle-switch{
+    width: 50px;
+    height: 25px;
+    background: #ccc;
+    border-radius: 25px;
+    position: relative;
+}
+
+.toggle-ball {
+    width: 21px;
+    height: 21px;
+    background: white;
+    border-radius: 50%;
+    position: absolute;
+    top: 1%;
+    left: 1%;
+    bottom: 1%;
+    transition: trasform 0.3s ease;
 }
