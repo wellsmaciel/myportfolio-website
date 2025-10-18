@@ -27,32 +27,22 @@
     <div class="about-section reveal" id="about">
       <h2>About</h2>
       <p class="reveal">
-        I started my professional journey in the financial markets, where I
-        developed analytical thinking and a strong sense of precision while
-        working as an FX Sales Trader at Bradesco Bank in Brazil.
+        I began my career in the financial markets, working as an FX Sales
+        Trader at Bradesco Bank in Brazil. I have always been passionate about
+        markets and technology, thriving in a fast-moving environment where
+        interest rates, economic events, and unexpected shocks can reshape the
+        day. That pace taught me discipline, attention to detail, and the
+        ability to stay prepared for the unpredictable.
       </p>
-
-      <p class="reveal">
-        Over time, my curiosity for technology and systems led me to transition
-        into the tech industry — a move that shaped my current career as a
-        Senior Customer Solutions Consultant at SiteMinder, in Galway, Ireland.
-      </p>
-
-      <p class="reveal">
-        I am responsible for technical support leadership, team training, and
-        problem-solving within SiteMinder’s global SaaS ecosystem — mentoring
-        colleagues and resolving complex technical issues using SQL, Unix, XML,
-        OpenSearch, and Jira.
-      </p>
-
-      <p class="reveal">
-        I am also pursuing a Postgraduate Degree in Full Stack Development,
-        deepening my knowledge in modern software engineering.
-      </p>
-
-      <p class="reveal">
-        What drives me is continuous learning, innovation, and the challenge of
-        turning complex problems into clear, scalable solutions.
+      <p>
+        Today, as a Senior Customer Solutions Consultant at SiteMinder (Galway,
+        Ireland), I apply the same mindset to technology—resolving complex
+        issues, mentoring teammates, and supporting global SaaS operations. I
+        combine analytical rigor with hands-on problem solving using SQL, Unix,
+        XML, OpenSearch, and Jira. I am also expanding my expertise into Full
+        Stack Development to bridge customer experience with software
+        engineering and keep pace with a field that evolves every day. turning
+        complex problems into clear, scalable solutions.
       </p>
     </div>
 
@@ -61,24 +51,27 @@
       <ul>
         <li class="reveal">
           Postgraduate in Full Stack Development: Pontifícia Universidade
-          Católica de Minas Gerais, Expected 2026
+          Católica de Minas Gerais | Expected 2026
         </li>
         <li class="reveal">
           Bachelor's in Business Administration: Centro Universitário Nove de
-          Julho (Uninove), 2014
+          Julho (Uninove) | 2014
         </li>
         <li class="reveal">
-          Bachelor's in Marketing: Centro Universitário Nove de Julho (Uninove),
-          2010
+          Bachelor's in Marketing: Centro Universitário Nove de Julho (Uninove)
+          | 2010
         </li>
       </ul>
     </div>
 
     <div class="courses-section reveal" id="courses">
       <h2>Certification & Courses</h2>
-      <h3>Courses</h3>
+      <h3 class="reveal">Courses</h3>
       <ul>
-        <li>Git & GitHub: Fundamentals | Udemy (2025)</li>
+        <li class="reveal">
+          JavaScript: From Zero to Advanced + Projects | Udemy (2025)
+        </li>
+        <li class="reveal">Git & GitHub: Fundamentals | Udemy (2025)</li>
         <li class="reveal">
           Web Development - From Zero to Advanced + Projects | Udemy (2025)
         </li>
@@ -104,7 +97,7 @@
           | Udemy (2023)
         </li>
       </ul>
-      <h3>Certifications</h3>
+      <h3 class="reveal">Certifications</h3>
       <ul>
         <li class="reveal">
           Databases Specialist Certification | Certiport (2025)
@@ -119,12 +112,10 @@
     <div class="learning-section reveal">
       <h2>Learning Path</h2>
       <p class="reveal">
-        My learning path is focused on transitioning from technical support into
-        full stack development.
-      </p>
-      <p class="reveal">
-        I am building a strong foundation in web technologies, programming, and
-        cloud concepts to connect customer experience with software engineering.
+        My learning path focuses on expanding my expertise into Full Stack
+        Development — combining my strong analytical and troubleshooting
+        background with modern web technologies, programming, and cloud concepts
+        to bridge customer experience and software engineering.
       </p>
       <ul>
         <li class="reveal">
@@ -142,17 +133,30 @@
         <li class="reveal">Preparing for Docker and deployment workflows</li>
       </ul>
     </div>
-
+    <div class="project-section reveal">
+      <h2>Projects</h2>
+      <p class="reveal">Coming soon</p>
+    </div>
     <div class="contact-section reveal" id="contact">
       <form action="https://formspree.io/f/xovkrrpq" method="POST">
         <h2>Contact</h2>
-        <label class="reveal">
-          Your email: <input type="email" name="email" />
-        </label>
-        <label class="reveal">
-          Your message:<textarea name="message"></textarea>
-        </label>
-        <button type="sendmessage">Send</button>
+
+        <div class="form-row">
+          <label for="email" class="reveal">Your email:</label>
+          <input class="reveal" type="email" id="email" name="email" required />
+        </div>
+
+        <div class="form-row">
+          <label for="message" class="reveal">Your message:</label>
+          <textarea
+            class="reveal"
+            id="message"
+            name="message"
+            required
+          ></textarea>
+        </div>
+
+        <button class="reveal" type="submit">Send</button>
       </form>
     </div>
     <script src="main.js"></script>
