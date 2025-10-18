@@ -111,10 +111,16 @@
     </div>
     
     <div class="contact-section reveal" id="contact">
-        <h2>Contact</h2>
-        <label for="usermessage">Message</label><br>
-        <textarea name="textarea" id="textarea"></textarea>
-        <button id="sendmessage">Send</button>
+        <form action="https://formspree.io/f/xovkrrpq" method="POST"
+>           <h2>Contact</h2>
+                <label>
+                    Your email: <input type="email" name="email">
+                </label>
+                <label>
+                    Your message:<textarea name="message"></textarea>
+                </label>
+                <button type="sendmessage">Send</button>
+        </form>
     </div>
     <script src="main.js"></script>
 </body>
