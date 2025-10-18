@@ -1,20 +1,73 @@
+.section {
+  padding: 64px 0;
+  min-height: 100vh;
+}
 
-.name-section, .about-section, .education-section, .courses-section, .learning-section, 
+.name-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+h1 {
+  font-size: 5rem;
+}
+h2 {
+  font-size: 3.5rem;
+  margin-bottom: 0.5em;
+}
+p,
+li {
+  line-height: 1.6;
+  font-size: 1.5rem;
+}
+
+.personal-photo img {
+  text-align: center;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 8px 20px rgb(0, 0, 0, 0.4);
+}
+
+body.dark .personal-photo img {
+  width: 200px;
+  height: 200px;
+  border-radius: 75%;
+  object-fit: cover;
+  box-shadow: 0 8px 20px rgb(255, 255, 255, 0.6);
+}
+
+.name-section,
+.about-section,
+.education-section,
+.courses-section,
+.learning-section,
 .contact-section {
-    font-family: Arial, sans-serif;
-    text-align: center;
-    max-width: 60%;
-    margin: 0 auto;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  max-width: 60%;
+  margin: 0 auto;
 }
 ul {
-    text-align: left;
+  text-align: left;
 }
+ul li {
+  margin-bottom: 10px;
+}
+.name-section.reveal h1 {
+  font-weight: bold;
+  font-size: 6rem;
+}
+
 #textarea {
   padding: 8px;
   border: 1px solid #ccc;
   border-radius: 6px;
   font-family: inherit;
-  font-size: 14px;
+  font-size: 1.5rem;
   resize: vertical;
   outline: none;
 }
@@ -29,73 +82,81 @@ ul {
   padding: 5px 10px;
 }
 
-.theme-section label{
-    font-family: Arial, sans-serif;
-    font-size: 14px;
+.theme-section label {
+  font-family: Arial, sans-serif;
+  font-size: 1rem;
 }
 
-
 .theme-section {
-    position: fixed;
-    top: 15px;
-    right: 15px;
-    cursor: pointer;
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  cursor: pointer;
 }
 
 /* Light Theme - Default*/
 body {
-    background-color: var(--bg-light);
-    color: var(--text-light);
-    transition: background-color 0.3s ease, color 0.3s ease;
+  background-color: var(--bg-light);
+  color: var(--text-light);
+  transition: background-color 0.7s ease, color 0.7s ease;
+  padding-top: 20vh;
+  padding-bottom: 20vh;
 }
 
 body.dark {
-    background-color: var(--bg-dark);
-    color: var(--text-dark);
+  background-color: var(--bg-dark);
+  color: var(--text-dark);
 }
 
 body.dark .toggle-ball {
   transform: translateX(25px);
-  background: #e8f1d4; 
+  background: #e8f1d4;
 }
 
 body .toggle-ball {
-    background: #121b54;     
+  background: #121b54;
 }
 
-
 :root {
-    --bg-light: #e5e4e2;
-    --text-light: #121b54;
-    --bg-dark: #3a3b3c;
-    --text-dark: #e8f1d4;
+  --bg-light: #e5e4e2;
+  --text-light: #121b54;
+  --bg-dark: #3a3b3c;
+  --text-dark: #e8f1d4;
 }
 
 .reveal {
-    transform: translateY(16px);
-    transition: opacity .6s ease; transform: .6s ease;
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 1.2s ease, transform 1.2s ease;
 }
 
 .reveal.is-visible {
-    opacity: 1;
-    transform: none;
+  opacity: 1;
+  transform: none;
 }
-.toggle-switch{
-    width: 50px;
-    height: 25px;
-    background: #ccc;
-    border-radius: 25px;
-    position: relative;
+.toggle-switch {
+  width: 50px;
+  height: 25px;
+  background: #ccc;
+  border-radius: 25px;
+  position: relative;
 }
 
 .toggle-ball {
-    width: 21px;
-    height: 21px;
-    background: white;
-    border-radius: 50%;
-    position: absolute;
-    top: 1%;
-    left: 1%;
-    bottom: 1%;
-    transition: trasform 0.3s ease;
+  width: 21px;
+  height: 21px;
+  background: white;
+  border-radius: 50%;
+  position: absolute;
+  top: 1%;
+  left: 1%;
+  bottom: 1%;
+  transition: transform 0.7s ease;
+}
+
+label {
+  align-items: left;
+  display: block;
+  padding: 10px;
+  font-size: 1.5rem;
 }
