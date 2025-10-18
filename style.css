@@ -12,6 +12,7 @@
 
 h1 {
   font-size: 5rem;
+  text-shadow: 1px 2.5px rgb(0, 0, 0, 0.4);
 }
 h2 {
   font-size: 3.5rem;
@@ -21,6 +22,10 @@ p,
 li {
   line-height: 1.6;
   font-size: 1.5rem;
+}
+
+h3 {
+  font-size: 2rem;
 }
 
 .personal-photo img {
@@ -33,9 +38,10 @@ li {
 }
 
 body.dark .personal-photo img {
-  width: 200px;
-  height: 200px;
-  border-radius: 75%;
+  text-align: center;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
   object-fit: cover;
   box-shadow: 0 8px 20px rgb(255, 255, 255, 0.6);
 }
@@ -85,6 +91,9 @@ ul li {
 .theme-section label {
   font-family: Arial, sans-serif;
   font-size: 1rem;
+  text-align: center;
+  margin-bottom: 4px;
+  display: block;
 }
 
 .theme-section {
@@ -92,6 +101,7 @@ ul li {
   top: 15px;
   right: 15px;
   cursor: pointer;
+  text-align: center;
 }
 
 /* Light Theme - Default*/
@@ -100,7 +110,7 @@ body {
   color: var(--text-light);
   transition: background-color 0.7s ease, color 0.7s ease;
   padding-top: 20vh;
-  padding-bottom: 20vh;
+  padding-bottom: 40vh;
 }
 
 body.dark {
@@ -126,8 +136,8 @@ body .toggle-ball {
 
 .reveal {
   opacity: 0;
-  transform: translateY(16px);
-  transition: opacity 1.2s ease, transform 1.2s ease;
+  transform: translateY(64px);
+  transition: opacity 3.4s ease, transform 2.4s ease;
 }
 
 .reveal.is-visible {
@@ -159,4 +169,5 @@ label {
   display: block;
   padding: 10px;
   font-size: 1.5rem;
+  margin-bottom: 4px;
 }
