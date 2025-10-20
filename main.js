@@ -1,9 +1,9 @@
 //Theme toggle switch Button
-const themeButton = document.getElementById ("theme-button")
+const themeButton = document.getElementById('theme-button')
 
-themeButton.addEventListener("click", () => {
-  document.body.classList.toggle("dark");
-});
+themeButton.addEventListener('click', () => {
+  document.body.classList.toggle('dark')
+})
 
 /*
 const emailButton = document.getElementById ("sendmessage")
@@ -21,10 +21,3 @@ themeButton.addEventListener("click", () => {
     }
 });
 */
-
-
-
-
-
-
-
