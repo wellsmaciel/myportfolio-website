@@ -12,14 +12,15 @@
 }
 
 h1 {
-  font-size: 5rem;
+  font-weight: bold;
+  font-size: 4.5rem;
   text-shadow: 1px 2.5px rgb(0, 0, 0, 0.4);
 }
 .about-section p {
   line-height: 2;
 }
 h2 {
-  font-size: 3.5rem;
+  font-size: 2.8rem;
   margin-bottom: 0.5em;
 }
 p,
@@ -67,10 +68,6 @@ ul {
 }
 ul li {
   margin-bottom: 10px;
-}
-.name-section.reveal h1 {
-  font-weight: bold;
-  font-size: 6rem;
 }
 
 .theme-section label {
@@ -121,45 +118,48 @@ body.dark {
   opacity: 1;
   transform: none;
 }
+
 .toggle-switch {
   width: 50px;
   height: 25px;
-  background: #99a3a3;
-  border-radius: 25px;
   position: relative;
+  border: 1px solid #000; /* se usar borda, b = 1 */
+  border-radius: 25px;
+  box-sizing: border-box; /* conta a borda dentro do tamanho */
+  background: #99a3a3;
 }
 
 body.dark .toggle-switch {
   width: 50px;
   height: 25px;
-  background: #99a3a3;
-  border-radius: 25px;
   position: relative;
+  border: 1px solid #000; /* se usar borda, b = 1 */
+  border-radius: 25px;
+  box-sizing: border-box; /* conta a borda dentro do tamanho */
+  background: #99a3a3;
 }
 
 .toggle-ball {
-  width: 21px;
-  height: 21px;
-  border-radius: 50%;
   position: absolute;
-  background: var(--text-light);
   top: 1px;
-  left: 1px;
-  bottom: 1px;
+  left: 1px; /* g = 1 */
+  width: 22px;
+  height: 22px; /* se tiver borda=1; senão use 23px */
+  border-radius: 50%;
   transition: transform 0.7s ease;
+  background: var(--text-light);
 }
 
 body.dark .toggle-ball {
-  width: 21px;
-  height: 21px;
-  border-radius: 50%;
   position: absolute;
-  background: var(--text-dark);
   top: 1px;
-  right: 1px;
-  bottom: 1px;
+  left: 1px; /* g = 1 */
+  width: 22px;
+  height: 22px; /* se tiver borda=1; senão use 23px */
+  border-radius: 50%;
   transition: transform 0.7s ease;
-  transform: translateX(33px);
+  background: var(--text-dark);
+  transform: translateX(25px);
 }
 
 .form-row {
@@ -182,11 +182,116 @@ body.dark .toggle-ball {
   border-radius: 6px;
   font: inherit;
 }
-button {
+.button {
   display: block;
   margin: 12px auto 0;
   padding: 12px 28px;
   font-size: 1.2rem;
   border-radius: 8px;
   cursor: pointer;
+}
+
+/* Responsive Design */
+
+@media (max-width: 700px) {
+  html {
+    font-size: 80%;
+  }
+
+  .personal-photo img,
+  body.dark .personal-photo img {
+    width: 140px;
+    height: 140px;
+    max-width: 100%;
+  }
+
+  .toggle-switch {
+    width: 36px;
+    height: 15px;
+    position: relative;
+    border-radius: 25px;
+    box-sizing: border-box;
+    background: #99a3a3;
+  }
+  .toggle-ball {
+    position: absolute;
+    top: 1px;
+    left: 1px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    transition: transform 0.7s ease;
+    background: var(--text-light);
+  }
+
+  body.dark .toggle-ball {
+    transform: translateX(21px);
+    position: absolute;
+    top: 1px;
+    right: 1px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+  }
+  body.dark .toggle-switch {
+    width: 36px;
+    height: 15px;
+    position: relative;
+    border-radius: 25px;
+    box-sizing: border-box;
+    background: #99a3a3;
+  }
+}
+
+@media (max-width: 450px) {
+  html {
+    font-size: 65%;
+  }
+  .theme-section {
+    font-size: 0.8rem;
+  }
+  .personal-photo img,
+  body.dark .personal-photo img {
+    width: 110px;
+    height: 110px;
+    max-width: 100%;
+  }
+
+  .toggle-switch {
+    width: 28px;
+    height: 15px;
+    position: relative;
+    border-radius: 25px;
+    box-sizing: border-box;
+    background: #99a3a3;
+  }
+  .toggle-ball {
+    position: absolute;
+    top: 1px;
+    left: 1px;
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    transition: transform 0.7s ease;
+    background: var(--text-light);
+  }
+
+  body.dark .toggle-ball {
+    position: absolute;
+    top: 1px;
+    right: 1px;
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    transition: transform 0.7s ease;
+    transform: translateX(13px);
+  }
+  body.dark .toggle-switch {
+    width: 28px;
+    height: 15px;
+    position: relative;
+    border-radius: 25px;
+    box-sizing: border-box;
+    background: #99a3a3;
+  }
 }
