@@ -1,21 +1,125 @@
+/*Colors */
+:root {
+  --surface1: #262626;
+  --surface2: #333333;
+  --surface3: #404040;
+  --shadow: #eeeeee;
+  --text: #dddddd;
+  --text2: #cccccc;
+  --elementInverse: #111;
+  --primary: #8fceff;
+  --secondary: #72faca;
+  --tertiary: #eee8a9;
+}
+
+/* Body, Hero and Section Backgrounds */
+body {
+  background-color: var(--surface1);
+}
+.container-fluid mb-3 {
+}
+#hero {
+  min-height: 100vh;
+}
+#hero h1 {
+  text-align: center;
+  margin-top: 45vh;
+  color: var(--text);
+  font-size: 1.5rem;
+}
+#hero h5 {
+  text-align: center;
+  color: var(--text);
+  font-size: 1.5rem;
+}
+#hero h4 {
+  text-align: center;
+  margin-top: 1vh;
+  color: var(--primary);
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+#topbar,
+#about,
+#education,
+#learning,
+#courses,
+#projects,
+#contact {
+  background-image: linear-gradient(
+    to bottom,
+    rgb(33, 33, 33, 1),
+    rgba(26, 26, 26, 0)
+  );
+  margin-bottom: 80px;
+}
+
+/* Personal Photo and Greetings CSS */
 .personal-photo img {
   max-width: 250px;
   width: 100%;
   aspect-ratio: 1 / 1;
   object-fit: cover;
   display: inline-block;
-  box-shadow: 0 8px 20px rgb(0, 0, 0, 0.4);
+  box-shadow: 0 8px 20px var(--shadow);
 }
 .personal-photo {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-h1 {
-  text-align: center;
-  padding: 100px;
-}
+/* Text CSS */
+
 h2 {
   text-align: center;
   padding: 5px;
+  color: var(--primary);
+}
+h3 {
+  text-align: center;
+  padding: 5px;
+  color: var(--tertiary);
+}
+
+p,
+ul {
+  text-align: center;
+  padding: 2px;
+  color: var(--text);
+}
+li {
+  text-align: justify;
+  list-style-position: inside;
+}
+li::marker {
+  color: var(--secondary);
+}
+
+/* Form and Button CSS */
+.form-row {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px;
+  max-width: 600px;
+  margin: 0 auto 12px;
+  font-size: 1.5rem;
+  color: var(--text);
+}
+.form-row label {
+  font-size: 1.1rem;
+}
+
+.form-row textarea {
+  width: 100%;
+  padding: 8px;
+  border-radius: 6px;
+}
+.contact-section button {
+  display: block;
+  margin: 12px auto 0;
+  padding: 6px 14px;
+  font-size: 1.2rem;
+  border-radius: 8px;
+  cursor: pointer;
 }
