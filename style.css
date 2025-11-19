@@ -7,38 +7,62 @@
   --text: #dddddd;
   --text2: #cccccc;
   --elementInverse: #111;
-  --primary: #8fceff;
+  --primary: #0060d1;
   --secondary: #72faca;
-  --tertiary: #eee8a9;
+  --tertiary: #d9eddf;
 }
 
-/* Body, Hero and Section Backgrounds */
+/*Body, Hero CSS */
 body {
   background-color: var(--surface1);
-}
-.container-fluid mb-3 {
+  font-family: arial, Helvetica, sans-serif;
 }
 #hero {
   min-height: 100vh;
+  opacity: 0;
+  transform: translateY(104px);
+  animation: hero-transition 1s ease-out forwards;
+}
+/*Hero Animation*/
+@keyframes hero-transition {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 #hero h1 {
   text-align: center;
-  margin-top: 45vh;
-  color: var(--text);
-  font-size: 1.5rem;
+  margin-top: 1.5rem;
+  color: var(--text2);
+  font-size: 2.5rem;
 }
 #hero h5 {
   text-align: center;
-  color: var(--text);
-  font-size: 1.5rem;
+  color: var(--text2);
+  font-size: 2.5rem;
 }
 #hero h4 {
   text-align: center;
   margin-top: 1vh;
   color: var(--primary);
-  font-size: 2.5rem;
+  font-size: 4.5rem;
   font-weight: bold;
 }
+/* Personal Photo and Greetings CSS */
+.personal-photo img {
+  max-width: 450px;
+  width: 80%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  display: inline-block;
+  box-shadow: 0 8px 20px var(--shadow);
+}
+.personal-photo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* Section Background CSS */
 #topbar,
 #about,
 #education,
@@ -51,22 +75,7 @@ body {
     rgb(33, 33, 33, 1),
     rgba(26, 26, 26, 0)
   );
-  margin-bottom: 80px;
-}
-
-/* Personal Photo and Greetings CSS */
-.personal-photo img {
-  max-width: 250px;
-  width: 100%;
-  aspect-ratio: 1 / 1;
-  object-fit: cover;
-  display: inline-block;
-  box-shadow: 0 8px 20px var(--shadow);
-}
-.personal-photo {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  margin-bottom: 20vh;
 }
 /* Text CSS */
 
@@ -74,18 +83,21 @@ h2 {
   text-align: center;
   padding: 5px;
   color: var(--primary);
+  font-size: 2.5rem;
 }
 h3 {
   text-align: center;
   padding: 5px;
   color: var(--tertiary);
+  font-size: 2.25rem;
 }
 
 p,
 ul {
-  text-align: center;
+  text-align: justify;
   padding: 2px;
-  color: var(--text);
+  color: var(--text2);
+  font-size: 1.25rem;
 }
 li {
   text-align: justify;
@@ -104,7 +116,7 @@ li::marker {
   max-width: 600px;
   margin: 0 auto 12px;
   font-size: 1.5rem;
-  color: var(--text);
+  color: var(--text2);
 }
 .form-row label {
   font-size: 1.1rem;
