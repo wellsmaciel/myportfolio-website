@@ -10,12 +10,16 @@
   --primary: #0060d1;
   --secondary: #72faca;
   --tertiary: #d9eddf;
+  --fundo: #1e2125;
+  --fundo2: #343b3c;
+  --color1: #ffcb3a;
+  --color2: #511d47;
+  --color3: #ff4f61;
 }
 
 /*Body, Hero CSS */
 body {
-  background-color: var(--surface1);
-  font-family: arial, Helvetica, sans-serif;
+  background-color: var(--surface2);
 }
 #hero {
   min-height: 100vh;
@@ -30,27 +34,35 @@ body {
     transform: translateY(0);
   }
 }
-#hero h1 {
-  text-align: center;
-  margin-top: 1.5rem;
-  color: var(--text2);
-  font-size: 2.5rem;
+.navbar a {
+  font-family: Montserrat, sans-serif;
 }
-#hero h5 {
+/*Greetings*/
+h1,
+h4 {
   text-align: center;
-  color: var(--text2);
-  font-size: 2.5rem;
+  font-family: Audiowide;
 }
-#hero h4 {
+.hero-greetings {
   text-align: center;
-  margin-top: 1vh;
-  color: var(--primary);
-  font-size: 4.5rem;
+  margin-top: 1.25rem;
+  color: var(--text2);
+  font-size: 1.2rem;
+}
+.hero-name {
+  color: var(--color1);
+  font-size: 2.4rem;
   font-weight: bold;
 }
-/* Personal Photo and Greetings CSS */
+.hero-role {
+  text-align: center;
+  color: var(--text2);
+  font-size: 1rem;
+}
+
+/* Personal Photo CSS */
 .personal-photo img {
-  max-width: 450px;
+  max-width: 260px;
   width: 80%;
   aspect-ratio: 1 / 1;
   object-fit: cover;
@@ -72,39 +84,43 @@ body {
 #contact {
   background-image: linear-gradient(
     to bottom,
-    rgb(33, 33, 33, 1),
-    rgba(26, 26, 26, 0)
+    var(--surface1) 0%,
+    var(--surface2) 100%
   );
   margin-bottom: 20vh;
 }
 /* Text CSS */
 
 h2 {
+  font-family: Audiowide, sans-serif;
   text-align: center;
   padding: 5px;
-  color: var(--primary);
+  color: var(--color3);
   font-size: 2.5rem;
 }
 h3 {
+  font-family: Audiowide, sans-serif;
   text-align: center;
   padding: 5px;
-  color: var(--tertiary);
-  font-size: 2.25rem;
+  color: var(--text2);
+  font-size: 2rem;
 }
 
 p,
 ul {
+  font-family: Montserrat, sans-serif;
   text-align: justify;
   padding: 2px;
   color: var(--text2);
   font-size: 1.25rem;
 }
 li {
+  font-family: Montserrat;
   text-align: justify;
   list-style-position: inside;
 }
 li::marker {
-  color: var(--secondary);
+  color: var(--color1);
 }
 
 /* Form and Button CSS */
@@ -134,4 +150,30 @@ li::marker {
   font-size: 1.2rem;
   border-radius: 8px;
   cursor: pointer;
+}
+/* Media Queries */
+@media (min-width: 768px) and (max-width: 991px) {
+  .hero-greetings {
+    font-size: 1.4rem;
+  }
+  .hero-name {
+    font-size: 3rem;
+  }
+  .hero-role {
+    font-size: 1.2rem;
+  }
+}
+@media (min-width: 992px) {
+  .personal-photo img {
+    max-width: 450px;
+  }
+  .hero-greetings {
+    font-size: 4rem;
+  }
+  .hero-name {
+    font-size: 7rem;
+  }
+  .hero-role {
+    font-size: 2.5rem;
+  }
 }
