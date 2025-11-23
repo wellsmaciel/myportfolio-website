@@ -47,17 +47,17 @@ h4 {
   text-align: center;
   margin-top: 1.25rem;
   color: var(--text2);
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 .hero-name {
   color: var(--color1);
-  font-size: 2.4rem;
+  font-size: 2.2rem;
   font-weight: bold;
 }
 .hero-role {
   text-align: center;
   color: var(--text2);
-  font-size: 1rem;
+  font-size: 0.9rem;
 }
 
 /* Personal Photo CSS */
@@ -153,6 +153,7 @@ li::marker {
 }
 /* Media Queries */
 @media (min-width: 768px) and (max-width: 991px) {
+
   .hero-greetings {
     font-size: 1.4rem;
   }
@@ -165,15 +166,15 @@ li::marker {
 }
 @media (min-width: 992px) {
   .personal-photo img {
-    max-width: 450px;
+    max-width: 500px;
   }
   .hero-greetings {
-    font-size: 4rem;
+    font-size: 3rem;
   }
   .hero-name {
-    font-size: 7rem;
+    font-size: 4rem;
   }
   .hero-role {
-    font-size: 2.5rem;
+    font-size: 1.3rem;
   }
 }
