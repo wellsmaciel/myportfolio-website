@@ -1,23 +1,21 @@
-/*Colors */
-:root {
-  --surface1: #262626;
-  --surface2: #333333;
-  --surface3: #404040;
-  --shadow: #eeeeee;
-  --text: #dddddd;
-  --text2: #cccccc;
-  --elementInverse: #111;
-  --primary: #0060d1;
-  --secondary: #72faca;
-  --tertiary: #d9eddf;
-  --fundo: #1e2125;
-  --fundo2: #343b3c;
-  --color1: #ffcb3a;
-  --color2: #511d47;
-  --color3: #ff4f61;
+:root[color-mode='dark'] {
+  --surface1: #262626; /*section background*/
+  --surface2: #333333; /*background*/
+  --shadow: #eeeeee; /*shadow*/
+  --text2: #cccccc; /*text*/
+  --color1: #ffcb3a; /*hero name color and li*/
+  --color3: #ff4f61; /*H2 color*/
 }
+:root[color-mode='light'] {
+  --surface1: #d4c9be;
+  --surface2: #f1efec;
+  --shadow: #474554;
+  --text2: #030303;
+  --color1: #123458;
+  --color3: #506b72;
+}
+/*Body, Hero CSS*/
 
-/*Body, Hero CSS */
 body {
   background-color: var(--surface2);
 }
@@ -27,15 +25,13 @@ body {
   transform: translateY(104px);
   animation: hero-transition 1s ease-out forwards;
 }
+
 /*Hero Animation*/
 @keyframes hero-transition {
   to {
     opacity: 1;
     transform: translateY(0);
   }
-}
-.navbar a {
-  font-family: Montserrat, sans-serif;
 }
 /*Greetings*/
 h1,
@@ -58,6 +54,49 @@ h4 {
   text-align: center;
   color: var(--text2);
   font-size: 0.9rem;
+}
+
+/*Theme Button*/
+.theme-section {
+  position: fixed;
+  top: 80px;
+  right: 20px;
+  text-align: center;
+  color: var(--text2);
+  z-index: 1;
+}
+
+.toggle-switch {
+  width: 50px;
+  height: 25px;
+  position: relative;
+  border: 1px solid #000;
+  border-radius: 25px;
+  box-sizing: border-box;
+  background-color: var(--surface2);
+}
+.toggle-ball {
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  transition: transform 0.7s ease;
+  background-color: var(--color1);
+}
+
+:root[color-mode='dark'] .toggle-ball {
+  transform: translateX(0);
+}
+:root[color-mode='light'] .toggle-ball {
+  transform: translateX(24px);
+}
+/*Navbar*/
+.navbar a {
+  font-family: Montserrat, sans-serif;
+  background-color: var(--surface2);
+  color: var(--text2);
 }
 
 /* Personal Photo CSS */
@@ -105,15 +144,6 @@ h3 {
   color: var(--text2);
   font-size: 2rem;
 }
-
-p,
-ul {
-  font-family: Montserrat, sans-serif;
-  text-align: justify;
-  padding: 2px;
-  color: var(--text2);
-  font-size: 1.25rem;
-}
 li {
   font-family: Montserrat;
   text-align: justify;
@@ -123,6 +153,14 @@ li::marker {
   color: var(--color1);
 }
 
+p,
+ul {
+  font-family: Montserrat, sans-serif;
+  text-align: justify;
+  padding: 2px;
+  color: var(--text2);
+  font-size: 1.25rem;
+}
 /* Form and Button CSS */
 .form-row {
   display: flex;
@@ -153,7 +191,6 @@ li::marker {
 }
 /* Media Queries */
 @media (min-width: 768px) and (max-width: 991px) {
-
   .hero-greetings {
     font-size: 1.4rem;
   }

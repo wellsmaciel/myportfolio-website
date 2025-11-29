@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" color-mode="dark">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -23,7 +23,7 @@
   </head>
   <body>
     <header>
-      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <nav class="navbar navbar-expand-lg navbar-custom">
         <div class="container">
           <a class="navbar-brand" href="#"></a>
 
@@ -67,6 +67,12 @@
         </div>
       </nav>
     </header>
+    <div class="theme-section">
+      <label class="theme-button">Theme</label><br />
+      <button class="toggle-switch" id="theme-button">
+        <span class="toggle-ball"></span>
+      </button>
+    </div>
     <div class="container-fluid mb-3">
       <div class="row align-items-md-center" id="hero">
         <div class="personal-photo offset-md-1 col-md-3 col-sm-12">
@@ -215,5 +221,6 @@
       integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
       crossorigin="anonymous"
     ></script>
+    <script src="main.js"></script>
   </body>
 </html>
