@@ -1,23 +1,12 @@
-//Theme toggle switch Button
-const themeButton = document.getElementById('theme-button')
+const themeButton = document.getElementById('theme-button');
+const htmlFile = document.documentElement;
 
-themeButton.addEventListener('click', () => {
-  document.body.classList.toggle('dark')
-})
+themeButton.addEventListener('click', function () {
+  let currentTheme = htmlFile.getAttribute('color-mode');
 
-/*
-const emailButton = document.getElementById ("sendmessage")
-
-emailButton.addEventListener("click")*/
-
-/* Old Button
-themeButton.addEventListener("click", () => {
-    document.body.classList.toggle("Dark");
-
-    if (document.body.classList.contains("Dark")) {
-        themeButton.textContent = "☀️ Light"
-    } else {
-        themeButton.textContent = "🌙 Dark"
-    }
+  if (currentTheme === 'light') {
+    htmlFile.setAttribute('color-mode', 'dark');
+  } else {
+    htmlFile.setAttribute('color-mode', 'light');
+  }
 });
-*/
