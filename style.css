@@ -121,11 +121,7 @@ h4 {
 #courses,
 #projects,
 #contact {
-  background-image: linear-gradient(
-    to bottom,
-    var(--surface1) 0%,
-    var(--surface2) 100%
-  );
+  background-image: linear-gradient(to bottom, var(--surface1) 0%, var(--surface2) 100%);
   margin-bottom: 20vh;
 }
 /* Text CSS */
@@ -188,6 +184,16 @@ ul {
   font-size: 1.2rem;
   border-radius: 8px;
   cursor: pointer;
+}
+/*Button link*/
+a {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 3px 7px;
+  font-size: 1rem;
+  border-radius: 8px;
+  background-color: var(--color1);
+  color: var(--surface2);
 }
 /* Media Queries */
 @media (min-width: 768px) and (max-width: 991px) {
