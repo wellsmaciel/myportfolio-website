@@ -208,20 +208,6 @@ h4 {
   }
 }
 
-/* Personal Photo CSS */
-.personal-photo img {
-  max-width: 260px;
-  width: 80%;
-  aspect-ratio: 1 / 1;
-  object-fit: cover;
-  display: inline-block;
-  box-shadow: 0 8px 20px var(--shadow);
-}
-.personal-photo {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 /* Section Background CSS */
 #topbar,
 #about,
@@ -425,10 +411,6 @@ main a:not(.action-button):focus-visible {
   #hero {
     padding-block: 1.5rem;
   }
-  .personal-photo img {
-    width: min(58vw, 190px);
-    max-width: 190px;
-  }
   .hero-greetings {
     font-size: 0.95rem;
   }
@@ -498,9 +480,6 @@ main a:not(.action-button):focus-visible {
   }
 }
 @media (min-width: 992px) {
-  .personal-photo img {
-    max-width: 500px;
-  }
   .hero-greetings {
     font-size: 3rem;
   }
