@@ -180,7 +180,7 @@ h4 {
 :root[color-mode='dark'] .navbar-custom .navbar-toggler-icon {
   filter: invert(1);
 }
-@media (max-width: 991.98px) {
+@media (max-width: 1199.98px) {
   .navbar-custom .navbar-collapse {
     padding: 0.35rem 0 0.65rem;
   }
@@ -188,7 +188,7 @@ h4 {
     gap: 0.1rem;
   }
 }
-@media (min-width: 992px) {
+@media (min-width: 1200px) {
   .navbar-custom .navbar-collapse {
     order: 2;
   }
@@ -206,6 +206,20 @@ h4 {
     opacity: 0.35;
     content: "";
   }
+}
+
+/* Personal Photo CSS */
+.personal-photo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.personal-photo img {
+  width: min(100%, 16rem);
+  aspect-ratio: 1;
+  object-fit: cover;
+  object-position: center 32%;
+  box-shadow: 0 8px 20px var(--shadow);
 }
 
 /* Section Background CSS */
