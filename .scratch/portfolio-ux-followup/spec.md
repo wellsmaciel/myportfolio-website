@@ -4,16 +4,16 @@ Recruiters can identify the candidate's target role and see project links, but t
 
 ## Solution
 
-Make contacting the candidate easy from the opening view, distinguish primary actions from ordinary links, and add a subtle desktop-only boundary between the last navigation link and the theme control. Present the existing projects as clearer, scannable evidence using verified features, technology, and destinations; add screenshots only when an authentic capture is available. Reduce the visual weight of the course list without removing any previously approved courses.
+Make Contact easy to find in the sticky navigation, distinguish primary actions from ordinary links, and add a subtle desktop-only boundary between the last navigation link and the theme control. Keep the hero focused on role and experience. Present the existing projects as clearer, scannable evidence using verified features, technology, and destinations; add screenshots only when an authentic capture is available. Reduce the visual weight of the course list without removing any previously approved courses.
 
 ## User Stories
 
-1. As a recruiter, I want a clear contact action in the opening view so that I can reach the candidate without searching the whole page.
-2. As a recruiter, I want the hero to focus on role and contact instead of repeating location details so that the opening message stays concise.
+1. As a recruiter, I want a clear Contact link in the sticky navigation so that I can reach the candidate without searching the whole page.
+2. As a recruiter, I want the hero to focus on role and experience instead of repeating location details so that the opening message stays concise.
 3. As a recruiter, I want contact actions to be visually distinct from project and profile links so that I can predict what each click will do.
 4. As a desktop visitor, I want the theme control visually separated from the section links so that navigation and display settings read as different groups.
 5. As a mobile visitor, I want the compact sticky header to remain uncluttered so that the theme control and expandable menu stay easy to use.
-6. As a keyboard user, I want the contact action and other controls to have visible focus and clear accessible names so that I can navigate without a mouse.
+6. As a keyboard user, I want the Contact link and other controls to have visible focus and clear accessible names so that I can navigate without a mouse.
 7. As a recruiter, I want to see visual evidence of the candidate's strongest projects so that I can assess practical work quickly.
 8. As a reviewer, I want project descriptions to distinguish verified features and the candidate's contribution from assumptions so that the portfolio stays credible.
 9. As a visitor, I want project links to remain available so that I can open the deployed applications or source repositories.
@@ -40,7 +40,7 @@ Make contacting the candidate easy from the opening view, distinguish primary ac
 ## Testing Decisions
 
 - Use the rendered portfolio as the primary verification seam at desktop and mobile widths.
-- Verify the hero contact action reaches the existing form, project links remain intact, all course entries remain accessible, and there is no horizontal overflow.
+- Verify the sticky Contact link reaches the existing form and remains active after click, project links remain intact, all course entries remain accessible, and there is no horizontal overflow.
 - Exercise the theme control, keyboard focus, mobile menu, desktop divider visibility, and link/action states in both themes.
 - Review rendered project screenshots against their source pages for accuracy. If a project cannot be reached or no verified visual exists, do not add an image for it.
 - No automated test framework exists for this static UI. Do not add one for this change; use browser review and source diff review.

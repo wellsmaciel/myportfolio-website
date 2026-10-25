@@ -74,11 +74,8 @@ h4 {
 .hero-strength {
   margin: 0 auto 0.5rem;
   text-align: center;
-  color: var(--text2);
-  font-size: clamp(0.95rem, 1.5vw, 1.1rem);
-}
-.hero-strength {
   color: var(--color1);
+  font-size: clamp(0.95rem, 1.5vw, 1.1rem);
   font-weight: 700;
 }
 /*Theme Button*/
@@ -132,6 +129,10 @@ h4 {
 }
 .navbar-custom .navbar-brand {
   order: 1;
+  font-family: Montserrat, sans-serif;
+  color: var(--text2);
+  font-weight: 700;
+  padding: 0.65rem 0;
 }
 .navbar-controls {
   display: flex;
@@ -141,12 +142,6 @@ h4 {
 }
 .navbar-custom .navbar-collapse {
   order: 3;
-}
-.navbar-custom .navbar-brand {
-  font-family: Montserrat, sans-serif;
-  color: var(--text2);
-  font-weight: 700;
-  padding: 0.65rem 0;
 }
 .navbar-custom .navbar-toggler {
   min-width: 44px;
