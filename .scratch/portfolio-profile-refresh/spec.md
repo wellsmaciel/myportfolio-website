@@ -50,7 +50,6 @@ Lead with the Full Stack direction and use senior IT support experience as evide
 - Changes to the existing project apps, their deployments, or repository names.
 - New claims about skills, qualifications, or employment beyond the supplied glossary and existing portfolio content.
 - Removing or changing the existing project links and capstone language note.
-- Committing changes.
 
 ## Further Notes
 
