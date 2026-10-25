@@ -221,6 +221,12 @@ h4 {
   object-position: center 32%;
   box-shadow: 0 8px 20px var(--shadow);
 }
+/* Align the photo with the left edge of the section text below */
+@media (min-width: 768px) {
+  .personal-photo {
+    justify-content: flex-start;
+  }
+}
 
 /* Section Background CSS */
 #topbar,
