@@ -4,9 +4,9 @@
 
 **Blocked by:** None (can start immediately).
 
-**Status:** ready-for-agent
+**Status:** implemented; browser validation pending
 
-- [ ] The visual hierarchy gives projects more prominence than the course list.
-- [ ] Every currently approved course and certification remains present and accessible.
+- [x] The visual hierarchy gives projects more prominence than the course list.
+- [x] Every currently approved course and certification remains present and accessible.
 - [ ] Course presentation remains readable in light and dark themes and reflows on mobile.
-- [ ] The portfolio does not hide or remove course entries without a clear, accessible way to reveal them.
+- [x] The portfolio does not hide or remove course entries without a clear, accessible way to reveal them.

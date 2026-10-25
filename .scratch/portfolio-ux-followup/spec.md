@@ -39,7 +39,7 @@ Make Contact easy to find in the sticky navigation, distinguish primary actions 
 
 ## Testing Decisions
 
-- Use the rendered portfolio as the primary verification seam at desktop and mobile widths.
+- Use the rendered portfolio as the primary verification seam at desktop and mobile widths, including a 414 CSS px viewport representative of an iPhone 11.
 - Verify the sticky Contact link reaches the existing form and remains active after click, project links remain intact, all course entries remain accessible, and there is no horizontal overflow.
 - Exercise the theme control, keyboard focus, mobile menu, desktop divider visibility, and link/action states in both themes.
 - Review rendered project screenshots against their source pages for accuracy. If a project cannot be reached or no verified visual exists, do not add an image for it.
@@ -51,7 +51,6 @@ Make Contact easy to find in the sticky navigation, distinguish primary actions 
 - Adding résumé, email, or project outcome claims that have not been supplied or verified.
 - Blog changes, external project changes, new deployments, or replacing existing URLs.
 - A full visual redesign, unrelated color-theme changes, or a new CSS framework.
-- Committing changes or opening a pull request in this round.
 
 ## Further Notes
 
@@ -62,3 +61,4 @@ Make Contact easy to find in the sticky navigation, distinguish primary actions 
 - The user approved the rendered-page verification seam and the three-ticket breakdown before implementation.
 - The user approved removing the repeated location-availability sentence from the hero while keeping it in About.
 - The user requested removal of the hero Contact me button; the sticky navigation remains the contact path.
+- The mobile rules target the iPhone 11's 414 CSS px width. A rendered visual check at that viewport remains pending.
