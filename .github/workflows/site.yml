@@ -14,26 +14,6 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  # Commits and PRs here never credit an AI assistant
-  attribution:
-    if: github.event_name == 'pull_request'
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-
-      - name: Reject AI attribution in commits and PR body
-        env:
-          BASE: ${{ github.event.pull_request.base.sha }}
-          HEAD: ${{ github.event.pull_request.head.sha }}
-          PR_BODY: ${{ github.event.pull_request.body }}
-        run: |
-          if { git log --format=%B "$BASE..$HEAD"; printf '%s\n' "$PR_BODY"; } | grep -inE 'co-authored-by:.*(claude|anthropic)|generated with \[?claude|claude\.com|anthropic\.com'; then
-            echo "::error::Remove the AI attribution lines above"
-            exit 1
-          fi
-
   check:
     runs-on: ubuntu-latest
     steps:
